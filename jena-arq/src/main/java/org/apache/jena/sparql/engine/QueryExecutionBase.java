@@ -145,6 +145,8 @@ public class QueryExecutionBase implements QueryExecution
             alarmClock.cancel(timeout1Callback) ;
         if ( timeout2Callback != null )
             alarmClock.cancel(timeout2Callback) ;
+
+        alarmClock.release();
     }
 
     @Override
@@ -612,4 +614,6 @@ public class QueryExecutionBase implements QueryExecution
 
     public void setInitialBindings(ResultSet table)
     { throw new UnsupportedOperationException("setInitialBindings(ResultSet)") ; }
+
+
 }
