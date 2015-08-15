@@ -66,4 +66,9 @@ public class AlarmClock {
     public void release() {
         timer.shutdownNow() ;
     }
+
+    public void rearm(){
+        timer.shutdownNow() ;
+        timer = new ScheduledThreadPoolExecutor(1);
+    }
 }

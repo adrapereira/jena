@@ -146,7 +146,7 @@ public class QueryExecutionBase implements QueryExecution
         if ( timeout2Callback != null )
             alarmClock.cancel(timeout2Callback) ;
 
-        alarmClock.release();
+        alarmClock.rearm();
     }
 
     @Override
